@@ -7,9 +7,9 @@ const PORT = process.env.PORT || 3001;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(require('./routes'));
+app.use(require('./routes/api'));
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/pizza-hunt', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/socialnetworkdb', {
   useFindAndModify: false,
   useNewUrlParser: true,
   useUnifiedTopology: true
@@ -17,4 +17,4 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/pizza-hunt', {
 
 mongoose.set('debug', true);
 
-app.listen(PORT, () => console.log(`🌍 Connected on localhost:${PORT}`));
+app.listen(PORT, () => console.log(`🥳 Connected on localhost:${PORT}`));

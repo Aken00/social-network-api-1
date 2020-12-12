@@ -10,7 +10,7 @@ const ReactionSchema = new Schema(
         RactionBody: {
             type: String,
             required: true,
-            trim: true
+            maxlength: 280
         },
         username: {
             type: String,
@@ -45,6 +45,7 @@ const ThoughtSchema = new Schema({
         type: String,
         required: true,
     },
+    // Using ReactionSchema to validate raction data to thought 
     reactions: [ReactionSchema],
     },
     {
