@@ -3,11 +3,11 @@ const dateFormat = require('../utils/dateFormat');
 
 const ReactionSchema = new Schema(
     {
-        ReactionId: {
+        reactionId: {
             type: Schema.Types.ObjectId,
             default: () => new Types.ObjectId()
         },
-        RactionBody: {
+        ractionBody: {
             type: String,
             required: true,
             maxlength: 280
@@ -32,7 +32,7 @@ const ReactionSchema = new Schema(
 const ThoughtSchema = new Schema({
     thoughtText: {
         type: String,
-        required: 'Please make a thought',
+        required: 'Please write a thought',
         minlength: 1,
         maxlength: 280
     },
@@ -57,6 +57,7 @@ const ThoughtSchema = new Schema({
     }
 );
 
+// Virtual to get raction count
 ThoughtSchema.virtual('reactionCount').get(function () {
     return this.reactions.length;
 });

@@ -7,18 +7,22 @@ const {
     updateThought,
     removeThought,
     addReaction,
-    removeReaction
+    removeAllReaction,
+    removeOneReaction,
 } = require('../../controllers/thought-controller');
 
-// /api/thoughts
+// 'GET' all thoughts and 'POST' to create thoughts at users/api/thoughts
 router
     .route('/')
-    .get(getAllThoughts);
+    .get(getAllThoughts)
+    .post(addThought);
 
-// /api/thoughts/<thoughtId>
+// 'GET' one thought by id, 'PUT' to update thought, and 'DELETE' a thought at api/thoughts/<thoughtId>
 router
-    .route('/:thoughtId')
-    .get(getThoughtById);
+    .route('/:id')
+    .get(getThoughtById)
+    .put(updateThought)
+    .delete(removeThought)
 
 // /api/thoughts/<userId>
 router
@@ -26,16 +30,15 @@ router
     .post(addThought)
     .put(updateThought);
 
-// api/thoughts/<userId>/<thoughtId>
+// 'POST' to add a friend and 'DELETE' a friend at api/thoughts/:thoughtId/reactions
 router
-    .route('/:userId/:thoughtId')
-    .delete(removeThought)
-    .post(addReaction);
-// .post(addReaction) needs a route to /api/thoughts/:thoughtId/reactions
+    .route('/thoughtId/reactions')
+    .post(addReaction)
+    .delete(removeAllReaction);
 
+// Create an extra route to 'DELETE' one reaction at api/:thoughtId/reactions/:reactionId
 router
-    .route('/:userId/:thoughtId/:reactionId')
-    .delete(removeReaction);
-// .delete(removeReaction) needs a route to /api/thoughts/:thoughtId/reactions
+    .route('/:thoughtId/reactions/:reactionId')
+    .delete(removeOneReaction);
 
 module.exports = router;
