@@ -15,10 +15,7 @@ The user can also add reactions/replies to thoughts.
 - [AcceptanceCriteria](#Acceptance Criteria)
 - [Technologies](#Technologies)
 - [Installation](#Installation)
-- [Usage](#Usage)
-- [Screenshots](#Screenshots)
 - [Links](#Links)
-- [Credits](#Credits)
 - [Questions](#Questions)
 
 ## User Story
@@ -51,23 +48,14 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 
 ## Installation 
 
-Run npm install to install the packages 
-
-## Ussage
-
-## Screenshots
-
-![Screenshots]()
-
-![Screenshots]()
-
-![Screenshots]()
-
-![Screenshots]()
+Both node.js, Insomnia Core and MongoDb must be installed on your mechine.
+Clone the repository.
+Run npm install to install the packages.
+Start the apliaction by running 'npm start'.
+Open Insomnia Core and test the routes.
 
 ## Links
 View Deployed Project here:https://github.com/Aken00/social-network-api-1
-
 View video Tutorial here:
 
 ## Questions
@@ -75,3 +63,5 @@ View video Tutorial here:
   * Github Username: Aken00
   * [User Github](https://github.com/Aken00)
   * You can reach me at (ajken04@gmail.com)
+
+
