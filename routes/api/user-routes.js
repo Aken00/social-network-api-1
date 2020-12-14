@@ -1,6 +1,5 @@
 const router = require('express').Router();
 
-
 const {
     getAllUsers,
     getUserById,
@@ -33,5 +32,5 @@ router
     .delete(removeFriend);
 
 
-module.exports - router;
+module.exports = router;
 

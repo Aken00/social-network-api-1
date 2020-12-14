@@ -41,6 +41,7 @@ const thoughtController = {
 
     // add thought pushed to user /api/thoughts/:userId
     addThought({ body }, res) {
+        console.log(body)
         Thought.create(body)
             .then(({ _id }) => {
                 return User.findOneAndUpdate(
@@ -137,7 +138,7 @@ const thoughtController = {
             .select('-__v')
             .then(thoughtData => {
                 if (!thoughtData) {
-                    res.status(404).json({ message: 'No reaction can  be found with that id!' });
+                    res.status(404).json({ message: 'No reaction can be found with that id!' });
                     return;
                 }
                 res.json({ message: 'Your reaction was removed!' });

@@ -51,7 +51,7 @@ const userController = {
                     res.status(404).json({ message: 'No user can be found with this id!' });
                     return;
                 }
-                res.json(dbUserData);
+                res.json({ message: 'User was updated'});
             })
             .catch(err => res.status(400).json(err));
     },

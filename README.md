@@ -67,11 +67,11 @@ Run npm install to install the packages
 
 ## Links
 View Deployed Project here:https://github.com/Aken00/social-network-api-1
-View video Tutorial here:
 
-## Credits
+View video Tutorial here:
 
 ## Questions
 
-
-
+  * Github Username: Aken00
+  * [User Github](https://github.com/Aken00)
+  * You can reach me at (ajken04@gmail.com)

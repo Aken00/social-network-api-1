@@ -24,15 +24,9 @@ router
     .put(updateThought)
     .delete(removeThought)
 
-// /api/thoughts/<userId>
-router
-    .route('/:userId')
-    .post(addThought)
-    .put(updateThought);
-
 // 'POST' to add a friend and 'DELETE' a friend at api/thoughts/:thoughtId/reactions
 router
-    .route('/thoughtId/reactions')
+    .route('/:thoughtId/reactions')
     .post(addReaction)
     .delete(removeAllReaction);
 
