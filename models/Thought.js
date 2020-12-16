@@ -7,7 +7,7 @@ const ReactionSchema = new Schema(
             type: Schema.Types.ObjectId,
             default: () => new Types.ObjectId()
         },
-        ractionBody: {
+        reactionBody: {
             type: String,
             required: true,
             maxlength: 280
@@ -45,7 +45,7 @@ const ThoughtSchema = new Schema({
         type: String,
         required: true,
     },
-    // Using ReactionSchema to validate raction data to thought 
+    // Using ReactionSchema to validate reaction data to thought 
     reactions: [ReactionSchema],
     },
     {
@@ -57,7 +57,7 @@ const ThoughtSchema = new Schema({
     }
 );
 
-// Virtual to get raction count
+// Virtual to get reaction count
 ThoughtSchema.virtual('reactionCount').get(function () {
     return this.reactions.length;
 });

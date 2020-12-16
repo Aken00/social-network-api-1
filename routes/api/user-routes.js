@@ -28,7 +28,7 @@ router
 // Set up the 'POST' to add a friend and 'DELETE' a friend at /api/users/:userId/friends/:friendId
 router
     .route('/:userId/friends/:friendId')
-    .put(addFriend)
+    .post(addFriend)
     .delete(removeFriend);
 
 
