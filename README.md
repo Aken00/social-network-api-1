@@ -57,7 +57,7 @@ Open Insomnia Core and test the routes.
 ## Links
 View Deployed Project here:https://github.com/Aken00/social-network-api-1
 
-View video Tutorial here:
+View video Tutorial here:https://youtu.be/kX0fZCvSrI4
 
 ## Questions
 
